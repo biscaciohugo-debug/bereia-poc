@@ -1,7 +1,7 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import Anthropic from "@anthropic-ai/sdk";
 
-const apiKey = process.env.GEMINI_API_KEY ?? "";
+export const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,});
 
-export const genAI = new GoogleGenerativeAI(apiKey);
+export const MODEL = "claude-sonnet-4-6";
 
-export const MODEL_NAME = "gemini-1.5-flash";
